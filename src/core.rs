@@ -39,7 +39,7 @@ impl Database {
                 .write(true)
                 .open(path)?;
             // Initialize an empty database if the file doesn't exist
-            let db = Database {
+            let mut db = Database {
                 data: HashMap::new(),
                 file,
             };
